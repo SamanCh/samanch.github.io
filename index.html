@@ -117,6 +117,34 @@ input[type=submit], input[type=button], button, .button { letter-spacing: 2px; }
     margin-top: 10px;
     text-align: center;
 }
+
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.button-grid .button {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+    .button-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .button-grid {
+        grid-template-columns: 1fr;
+    }
+}
 </style>
 </head>
 
@@ -126,7 +154,7 @@ input[type=submit], input[type=button], button, .button { letter-spacing: 2px; }
 				<div class="card-intro">
 													<h1 class="homepage-template-site-title" style="font-size: 50px;">Saman Chitsazian</h1> <!-- .homepage-template-site-title -->
 																				<p class="homepage-template-description">A career minded and results-driven Software Engineer and AI Specialist with an MSc in Artificial Intelligence, offering over 13 years of experience across both academic and industry settings. I have contributed as both a researcher and educator, sharing my knowledge through academic tutoring while continuously expanding my technical skill set. My expertise spans Artificial Intelligence, Robotics, and Machine Learning, and I have had the privilege of working on several collaborative corporate projects, as well as leading end-to-end production initiatives.</p> <!-- .homepage-template-description -->
-																	<div class="card-triggers">
+																	<div class="card-triggers button-grid">
 															<a id="card-open" class="button secondary" href="#card">
 							Discover						</a>
 							<a class="button primary" target="_blank" href="https://docs.google.com/document/d/1q0kXUwJDrijM0D-zncI54fKJI3WDwvY5/edit?usp=sharing&ouid=105966102962155234032&rtpof=true&sd=true">
